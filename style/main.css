@@ -92,3 +92,11 @@ textarea::-webkit-input-placeholder {
         width: 100%;
         height: 400px;
       }
+/*
+========================================
+    Output
+========================================
+*/
+.list-group {
+    padding-top: 30px;
+}
