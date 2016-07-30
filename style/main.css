@@ -1,0 +1,25 @@
+.navbar-brand {
+    padding-left: 100px;
+}
+.nav, .navbar-nav, .navbar-right {
+    padding-right: 100px;
+}
+.navbar, .navbar-default {
+    background-color: #2d2d2d;
+}
+.navbar-default .navbar-nav>li>a {
+    color: white;
+
+}
+.navbar-default .navbar-nav>li>a:hover {
+    color: #aaaaaa;
+}
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-brand:hover {
+    color: #aaaaaa;
+}
+body {
+    padding-top: 70px;
+}
