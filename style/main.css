@@ -98,8 +98,13 @@ textarea::-webkit-input-placeholder {
 ========================================
 */
 .list-group {
-    padding-top: 30px;
+    padding-left: 100px;
+    height:400px;
+    width:75%;
+    overflow:hidden;
+    overflow-y:scroll;
 }
+
 /*
 ========================================
     Main
@@ -109,5 +114,8 @@ h1 {
     text-align: center;
 }
 h3 {
+    text-align: center;
+}
+h4 {
     text-align: center;
 }
