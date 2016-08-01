@@ -100,7 +100,7 @@ textarea::-webkit-input-placeholder {
 .list-group {
     padding-left: 100px;
     height:400px;
-    width:75%;
+    width: 100%;
     overflow:hidden;
     overflow-y:scroll;
 }

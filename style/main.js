@@ -24,15 +24,15 @@ $('form').on('submit', function(event){
                                  if (namesArr[i].brewery.name !== ('Main Brewery')){
                                     console.log(namesArr[i].brewery.name);
 
-                                    var listItems = $('<li>')
+                                    var listItems = $('<li>');
                                     listItems.text(namesArr[i].brewery.name);
                                     listItems.addClass('list-group-item');
-                                    $(listItems).on('click', function(){
-                                       $(location).attr('href', namesArr[i].brewery.website)
-                                    });
+                                    listItems.attr('data-website', namesArr[i].brewery.website);
+                                    listItems.on('click', function(){
+                                       var website = $(this).attr('data-website');
+                                       $(location).attr('href', website);
+                                    })
                                     $('.list-group').append(listItems);
-
-
                   }
                }
             })
@@ -46,11 +46,3 @@ $('form').on('submit', function(event){
       }
    })
 })
-
-
-
-// var listOfBreweries = $(".list-group")
-// var newList = $("<li>");
-// newList.attr("value", namesArr[i].brewery.name);
-// newList.text(title["namesArr[i].brewery.name"]);
-// listOfBreweries.append(newOptions);
