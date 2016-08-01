@@ -57,3 +57,23 @@ $('form').on('submit', function(event){
       }
    })
 })
+
+var quotes = [
+   "Beer, it’s the best damn drink in the world.",
+   "There is no such thing as a bad beer. It’s that some taste better than others.",
+   "The best beer in the world is the open bottle in your hand - Danny Jansen",
+   "Beer is not the answer. Beer is the question. 'Yes' is the answer.",
+   "I work until beer o'clock",
+   "Beer is living proof that God loves us an wants us to be happy.",
+   "Beer: It doesn't have many vitamins, that's why you need to drink lots of it.",
+   "Friends bring happiness into your life, best friends bring beer.",
+   "I got 99 problems & beer solves all of 'em - Earl Dibbles Jr'"
+   ];
+
+function generate(){
+    return Math.floor(Math.random() * quotes.length);
+}
+
+$(document).ready(function() {
+    $(".quote").html(quotes[generate()]);
+})
