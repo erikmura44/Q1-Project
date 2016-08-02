@@ -12,16 +12,16 @@
 
 }
 .navbar-default .navbar-nav>li>a:hover {
-    color: #aaaaaa;
+    color: #ffb12b;
 }
 .navbar-default .navbar-brand {
     color: white;
 }
 .navbar-default .navbar-brand:hover {
-    color: #aaaaaa;
+    color: #ffb12b;
 }
-body {
-    padding-top: 70px;
+a.selected {
+    color: #ffc663;
 }
 /*
   ========================================
@@ -101,22 +101,38 @@ textarea::-webkit-input-placeholder {
 td {
     font-size: 0.8em;
 }
-
-
 /*
 ========================================
     Main
 ========================================
 */
-h1 {
+h1, h3, h4, h5 {
     text-align: center;
 }
-h3 {
+.title {
+    font-size: 6em;
+    font-family: 'Special Elite', cursive;
     text-align: center;
 }
-h4 {
-    text-align: center;
+#about {
+    content-align: center;
+}
+p {
+    font-size: 1.5em;
 }
 body {
+    padding-top: 70px;
     font-family: 'Raleway', sans-serif;
+    background: rgb(246,230,180);
+background: -moz-linear-gradient(-45deg,  rgb(246,230,180) 15%, rgb(237,144,23) 100%);
+background: -webkit-linear-gradient(-45deg,  rgb(246,230,180) 15%,rgb(237,144,23) 100%);
+background: linear-gradient(135deg,  rgb(246,230,180) 15%,rgb(237,144,23) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=1 );
+
+}
+#beer {
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
