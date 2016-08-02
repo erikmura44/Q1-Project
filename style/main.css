@@ -123,12 +123,7 @@ p {
 body {
     padding-top: 70px;
     font-family: 'Raleway', sans-serif;
-    background: rgb(246,230,180);
-background: -moz-linear-gradient(-45deg,  rgb(246,230,180) 15%, rgb(237,144,23) 100%);
-background: -webkit-linear-gradient(-45deg,  rgb(246,230,180) 15%,rgb(237,144,23) 100%);
-background: linear-gradient(135deg,  rgb(246,230,180) 15%,rgb(237,144,23) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6e6b4', endColorstr='#ed9017',GradientType=1 );
-
+    
 }
 #beer {
     width: 300px;
