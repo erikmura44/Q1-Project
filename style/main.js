@@ -9,6 +9,8 @@ $('.state').change(function(){
 })
 $('form').on('submit', function(event){
    event.preventDefault()
+   var allBreweries = []
+   var breweries = []
       myUrl = 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/locations?locality='+city+'&region='+state+'&key=ee92426cf2e9727bd6730249465b5c54',
          console.log(myUrl);
          $.get(myUrl)
@@ -25,36 +27,33 @@ $('form').on('submit', function(event){
                                  if (namesArr[i].brewery.name !== ('Main Brewery')){
                                     console.log(namesArr[i].brewery.name);
 
-                                    var listItems = $('<li>');
-                                    listItems.text(namesArr[i].brewery.name);
-                                    listItems.addClass('list-group-item');
-                                    listItems.attr('data-website', namesArr[i].brewery.website);
-                                    listItems.on('click', function(){
-                                       var website = $(this).attr('data-website');
-                                       $(location).attr('href', website);
-                                    })
-                                    $('.list-group').append(listItems);
+                                    breweries[i] = {
+                                        tabBrewery: namesArr[i].brewery.name,
+                                        tabDescription: namesArr[i].brewery.description,
+                                        tabWebsite: namesArr[i].brewery.website,
+                        }
+                                    $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
+                                    allBreweries.push(namesArr[i])
+                   }
                   }
-               }
-            })
-         }
-      } else {
+               })
+            }
+         } else {
          for(i in namesArr){
-               if (namesArr[i].brewery.name !== ('Main Brewery')){
-                  console.log(namesArr[i].brewery.name);
-                  var listItems = $('<li>');
-                  listItems.text(namesArr[i].brewery.name);
-                  listItems.addClass('list-group-item');
-                  listItems.attr('data-website', namesArr[i].brewery.website);
-                  listItems.on('click', function(){
-                     var website = $(this).attr('data-website');
-                     $(location).attr('href', website);
-                  })
-                  $('.list-group').append(listItems);
+            if (namesArr[i].brewery.name !== ('Main Brewery')){
+               console.log(namesArr[i].brewery.name);
+
+               breweries[i] = {
+                   tabBrewery: namesArr[i].brewery.name,
+                   tabDescription: namesArr[i].brewery.description,
+                   tabWebsite: namesArr[i].brewery.website,
+                  }
+               $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
+               allBreweries.push(namesArr[i])
             }
          }
       }
-   })
+})
 })
 
 var quotes = [

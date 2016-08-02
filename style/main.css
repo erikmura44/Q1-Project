@@ -30,8 +30,9 @@ body {
 */
 
 form {
-	width:459px;
+	width:470px;
 	margin:0 auto;
+    margin-bottom: 40px;
     border: 1px solid grey;
     border-radius: 10px;
     padding: 15px;
@@ -88,18 +89,11 @@ textarea::-webkit-input-placeholder {
     Output
 ========================================
 */
-.list-group {
-    padding-left: 100px;
-    height:400px;
-    width: 100%;
-    overflow:hidden;
-    overflow-y:scroll;
-    text-align: center;
-    text-decoration: underline;
+#brewery {
+    width: 15%;
 }
-.list-group li:hover {
-    color: red;
-    cursor: pointer;
+td {
+    font-size: 0.8em;
 }
 
 /*
@@ -115,7 +109,4 @@ h3 {
 }
 h4 {
     text-align: center;
-}
-.title {
-
 }
