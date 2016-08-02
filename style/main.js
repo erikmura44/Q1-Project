@@ -51,7 +51,6 @@ $('form').on('submit', function(event){
                      $(location).attr('href', website);
                   })
                   $('.list-group').append(listItems);
-
             }
          }
       }
