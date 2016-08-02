@@ -92,9 +92,16 @@ textarea::-webkit-input-placeholder {
 #brewery {
     width: 15%;
 }
+#website {
+    width: 10%;
+}
+#desc {
+    width: 75%;
+}
 td {
     font-size: 0.8em;
 }
+
 
 /*
 ========================================
@@ -109,4 +116,7 @@ h3 {
 }
 h4 {
     text-align: center;
+}
+body {
+    font-family: 'Raleway', sans-serif;
 }
