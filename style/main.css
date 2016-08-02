@@ -23,6 +23,10 @@
 a.selected {
     color: #ffc663;
 }
+#nav-bottom {
+    margin: 0;
+    padding: 0;
+}
 /*
   ========================================
   Contact
