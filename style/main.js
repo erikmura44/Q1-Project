@@ -25,7 +25,7 @@ $('form').on('submit', function(event){
                         for(i in namesArr){
                            if (namesArr[i].brewery.name !== ('Main Brewery')){ ///check that none of the names are Main Brewery, the default
                               console.log(namesArr[i].brewery.name);
-                           $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
+                           $(".output").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
                               allBreweries.push(namesArr[i])
                               // console.log(allBreweries);
                            }
@@ -36,7 +36,7 @@ $('form').on('submit', function(event){
                   for(i in namesArr){
                      if (namesArr[i].brewery.name !== ('Main Brewery')){
                         console.log(namesArr[i].brewery.name);
-                        $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
+                        $(".output").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><hr><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")<hr>
                            allBreweries.push(namesArr[i])
                }
             }
@@ -51,6 +51,7 @@ $('.city').focus(function(){
 $('.state').focus(function(){
    $('td').remove();
 })
+
 
 
 

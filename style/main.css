@@ -93,17 +93,20 @@ textarea::-webkit-input-placeholder {
 ========================================
 */
 #brewery {
-    width: 15%;
+    width: 30%;
 }
 #website {
     width: 10%;
 }
 #desc {
-    width: 75%;
+    width: 60%;
 }
 td {
     font-size: 0.8em;
+    color: #2d2d2d;
 }
+
+
 /*
 ========================================
     Main
@@ -111,6 +114,9 @@ td {
 */
 h1, h3, h4, h5 {
     text-align: center;
+}
+h3 {
+    width: 50%;
 }
 .title {
     font-size: 6em;
@@ -127,12 +133,6 @@ body {
     padding-top: 120px;
     font-family: 'Raleway', sans-serif;
 
-}
-#beer {
-    width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 .quote {
     border: 1px solid #d9d9d9;
