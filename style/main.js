@@ -25,14 +25,9 @@ $('form').on('submit', function(event){
                         for(i in namesArr){
                            if (namesArr[i].brewery.name !== ('Main Brewery')){ ///check that none of the names are Main Brewery, the default
                               console.log(namesArr[i].brewery.name);
-                              breweries[i] = {
-                                 tabBrewery:namesArr[i].brewery.name,
-                                 tabDescription:namesArr[i].brewery.description,
-                                 tabWebsite: namesArr[i].brewery.website,
-
-                                       }
                            $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
                               allBreweries.push(namesArr[i])
+                              // console.log(allBreweries);
                            }
                         }
                      })
@@ -41,34 +36,37 @@ $('form').on('submit', function(event){
                   for(i in namesArr){
                      if (namesArr[i].brewery.name !== ('Main Brewery')){
                         console.log(namesArr[i].brewery.name);
-                        breweries[i] = {
-                           tabBrewery: namesArr[i].brewery.name,
-                           tabDescription: namesArr[i].brewery.description,
-                           tabWebsite: namesArr[i].brewery.website,
-
-                        }
                         $(".table").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
                            allBreweries.push(namesArr[i])
                }
             }
          }
       })
-   })
+   });
 
-   var quotes = [
-      "Beer, it’s the best damn drink in the world.",
-      "There is no such thing as a bad beer. It’s that some taste better than others.",
-      "The best beer in the world is the open bottle in your hand - Danny Jansen",
-      "Beer is not the answer. Beer is the question. 'Yes' is the answer.",
-      "I work until beer o'clock",
-      "Beer is living proof that God loves us an wants us to be happy.",
-      "Beer: It doesn't have many vitamins, that's why you need to drink lots of it.",
-      "Friends bring happiness into your life, best friends bring beer.",
-      "I got 99 problems & beer solves all of 'em - Earl Dibbles Jr'"
-      ];
-   function generate(){
-       return Math.floor(Math.random() * quotes.length);
-   }
-   $(document).ready(function() {
-       $(".quote").html(quotes[generate()]);
-   })
+$('.city').focus(function(){
+   $('td').remove();
+   $("input[type=text], textarea").val("");
+})
+$('.state').focus(function(){
+   $('td').remove();
+})
+
+
+var quotes = [
+   "Beer, it’s the best damn drink in the world.",
+   "There is no such thing as a bad beer. It’s that some taste better than others.",
+   "The best beer in the world is the open bottle in your hand - Danny Jansen",
+   "Beer is not the answer. Beer is the question. 'Yes' is the answer.",
+   "I work until beer o'clock",
+   "Beer is living proof that God loves us an wants us to be happy.",
+   "Beer: It doesn't have many vitamins, that's why you need to drink lots of it.",
+   "Friends bring happiness into your life, best friends bring beer.",
+   "I got 99 problems & beer solves all of 'em - Earl Dibbles Jr'"
+            ];
+function generate(){
+   return Math.floor(Math.random() * quotes.length);
+}
+$(document).ready(function() {
+   $(".quote").html(quotes[generate()]);
+})
