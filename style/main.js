@@ -7,6 +7,7 @@ $('.state').change(function(){
    console.log(state)
 })
 
+
 $('form').on('submit', function(event){
    event.preventDefault()
    var allBreweries = []
@@ -20,14 +21,13 @@ $('form').on('submit', function(event){
                numPages = data.numberOfPages;
                for(i = 2; i <= numPages; i++){
                   $.get('https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/locations?locality='+city+'&region='+state+'&p='+i+'&key=ee92426cf2e9727bd6730249465b5c54')
-                     .then (function (dataTwo){
+                     .then (function dataTwo(dataTwo){
                         namesArr = namesArr.concat(dataTwo.data);  ///add the data from the second page to the first
                         for(i in namesArr){
                            if (namesArr[i].brewery.name !== ('Main Brewery')){ ///check that none of the names are Main Brewery, the default
                               console.log(namesArr[i].brewery.name);
                            $(".output").append("<tr><td>"+namesArr[i].brewery.name+"</td><td>"+namesArr[i].brewery.description+"</td><td> <a href="+namesArr[i].brewery.website+" target="+"_blank"+">Website</a> </td></tr>")
-                              allBreweries.push(namesArr[i])
-                              // console.log(allBreweries);
+                              allBreweries.push(namesArr[i]);
                            }
                         }
                      })
@@ -51,9 +51,6 @@ $('.city').focus(function(){
 $('.state').focus(function(){
    $('td').remove();
 })
-
-
-
 
 var quotes = [
    "Beer, it’s the best damn drink in the world.",
