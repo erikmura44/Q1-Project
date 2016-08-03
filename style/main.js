@@ -53,6 +53,7 @@ $('.state').focus(function(){
 })
 
 
+
 var quotes = [
    "Beer, it’s the best damn drink in the world.",
    "There is no such thing as a bad beer. It’s that some taste better than others.",

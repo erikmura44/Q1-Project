@@ -326,7 +326,7 @@ h2 {
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
 }
-.button-box {
+#button {
     text-align: center;
     margin-top: 50px;
 }
