@@ -9,7 +9,6 @@
 }
 .navbar-default .navbar-nav>li>a {
     color: white;
-
 }
 .navbar-default .navbar-nav>li>a:hover {
     color: #ffb12b;
@@ -24,8 +23,8 @@ a.selected {
     color: #ffc663;
 }
 #nav-bottom {
-    margin: 0;
-    padding: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 /*
   ========================================
@@ -134,4 +133,9 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.quote {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 5px;
 }
