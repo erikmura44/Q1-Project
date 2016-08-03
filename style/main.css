@@ -93,13 +93,16 @@ textarea::-webkit-input-placeholder {
 ========================================
 */
 #brewery {
-    width: 30%;
+    width: 25%;
+    text-align: center;
 }
 #website {
-    width: 10%;
+    width: 5%;
+    text-align: center;
 }
 #desc {
-    width: 60%;
+    width: 70%;
+    text-align: center;
 }
 td {
     font-size: 0.8em;
