@@ -151,3 +151,7 @@ body {
   height:600px !important;
   margin-bottom: 30px !important;
 }
+button {
+    padding: 20px;
+    width: 50%;
+}
