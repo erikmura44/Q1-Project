@@ -1,4 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:700,900);
+@font-face {
+    font-family: 'Bernier';
+    src: url('bernier/Bernier.otf');
+}
 
 body { background-color: #0e83cd }
 
@@ -335,7 +339,7 @@ h2 {
 }
 .header h1 {
     font-size: 5em;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Bernier', cursive;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;

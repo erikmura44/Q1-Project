@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Bernier';
+    src: url('bernier/Bernier.otf');
+}
+
 .navbar-brand {
     padding-left: 100px;
 }
@@ -104,6 +109,11 @@ textarea::-webkit-input-placeholder {
     width: 70%;
     text-align: center;
 }
+table {
+    width:90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
 td {
     font-size: 1em;
     color: #2d2d2d;
@@ -116,14 +126,15 @@ td {
 */
 h1, h3, h4, h5 {
     text-align: center;
+    font-family:'Raleway';
 }
 h3 {
     margin-bottom: 30px;
-    font-family: 'Special Elite', cursive;
+    font-family:'Raleway';
 }
 .title {
     font-size: 6em;
-    font-family: 'Special Elite', cursive;
+    font-family: 'Bernier', cursive;
     text-align: center;
 }
 #about {
@@ -135,9 +146,7 @@ p {
 body {
     padding-top: 120px;
     font-family: 'Raleway', sans-serif;
-    /*background-image: url("http://foundersbrewing.com/wp-content/uploads/2012/04/AllDayAwardsBackground.jpg");*/
-    /*background-repeat:no-repeat;
-    background-size: cover;*/
+
 }
 .quote {
     border: 1px solid white;

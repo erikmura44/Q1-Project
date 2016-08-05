@@ -2,7 +2,7 @@ $('.city').change(function(){
    city = $(this).val()
    console.log(city)
 })
-$('.state').change(function(){
+$('#state').change(function(){
    state = $(this).val()
    console.log(state)
 })
@@ -102,7 +102,7 @@ $('.city').focus(function(){
    $("input[type=text], textarea").val("");
    marker = {};
 })
-$('.state').focus(function(){
+$('#state').focus(function(){
    $('td').remove();
 })
 
