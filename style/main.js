@@ -63,6 +63,10 @@ function createMarkers(lat,long){
 
 $('form').on('submit', function(event){
    event.preventDefault()
+   names = [];
+   lat = [];
+   long = [];
+   links = [];
    var allBreweries = []
    var breweries = []
       myUrl = 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/locations?locality='+city+'&region='+state+'&key=ee92426cf2e9727bd6730249465b5c54',
