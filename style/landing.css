@@ -20,7 +20,7 @@ h2 {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  top: -20px;
+  top: 0px;
   width: 248px;
 }
 
@@ -342,5 +342,12 @@ h2 {
     font-family: 'Bernier', cursive;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+.quote, h3 {
+    font-size: 1.5em;
+    font-family: 'Bernier', cursive;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }

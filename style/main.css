@@ -44,9 +44,6 @@ form {
     border: 1px solid grey;
     border-radius: 10px;
     padding: 15px;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 label {
 	display:block;
@@ -66,7 +63,6 @@ input, textarea {
 	font-size:0.9em;
 	color:#3a3a3a;
 }
-
 textarea {
 	height:213px;
 	font-family:Arial, Helvetica, sans-serif;
@@ -146,11 +142,9 @@ p {
 body {
     padding-top: 120px;
     font-family: 'Raleway', sans-serif;
-
+    background-color: #e7e7e7;
 }
 .quote {
-    border: 1px solid white;
-    border-radius: 5px;
     padding: 5px;
 }
 .map {
