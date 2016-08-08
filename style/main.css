@@ -35,11 +35,14 @@ a.selected {
 
 form {
 	width:auto;
-	margin:0 auto;
+	margin-left:0px !important;
     margin-bottom: 40px;
     border: 1px solid grey;
     border-radius: 10px;
     padding: 15px;
+}
+.col-lg-4, .col-lg-8 {
+    margin-left: 0;
 }
 label {
 	display:block;
@@ -74,6 +77,9 @@ textarea {
 }
 #submit:hover {
 		opacity:0.7;
+}
+#state {
+    width: auto;
 }
 input, textarea,
 input::-webkit-input-placeholder,
