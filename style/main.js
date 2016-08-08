@@ -40,7 +40,7 @@ function multiplePages(data){
             initMap(lat, long);
             createMarkers(lat, long);
             for (i in namesArr) {
-               $(".output").append("<tr><td>" + namesArr[i].brewery.name + " - " + namesArr[i].name + "</td><td>" + namesArr[i].brewery.description + "</td><td> <a href=" + namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>");
+               $(".output").append("<tr><td>" + namesArr[i].brewery.name + " - " + namesArr[i].name + "</td><td>" + namesArr[i].brewery.description + "</td><td><a href=" + namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>");
                $(".output td:nth-child(2)").css("font-size", "0.8em");
          }
       })
@@ -55,6 +55,7 @@ function onePage(data){
       initMap(lat, long);
       createMarkers(lat, long);
       $(".output").append("<tr><td>" + namesArr[i].brewery.name + "</td><td>" + namesArr[i].brewery.description + "</td><td> <a href=" + namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>")
+      $(".output td:nth-child(2)").css("font-size", "0.8em");
    }
 }
 
