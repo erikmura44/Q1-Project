@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <meta charset="utf-8">
-      <link rel="icon" href="images/icon.png">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-      <link rel="stylesheet" href="style/main.css">
-      <title>Beer Me!</title>
-   </head>
-   <body>
-      <nav class="navbar navbar-default navbar-fixed-top">
-         <div class="container-fluid">
-            <div class="navbar-header">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+<head>
+   <meta charset="utf-8">
+   <link rel="icon" href="images/icon.png">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+   <link rel="stylesheet" href="style/main.css">
+   <title>Beer Me!</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                <span class="sr-only">Toggle navigation</span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                </button>
-               <a class="navbar-brand" href="main.html">BEER ME!</a>
-            </div>
-            <div class="navbar-header">
-               <img src="images/icon.png">
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-               <ul class="nav navbar-nav navbar-right">
-                  <li><a href="about.html" class="link">About Me</a></li>
-                  <li><a href="contact.html" class="link">Contact Me</a></li>
-               </ul>
-            </div>
+            <a class="navbar-brand" href="main.html">BEER ME!</a>
          </div>
-      </nav>
-      <h3 class="quote">Beer is living proof that God loves use and wants us to be happy</h3>
-      <div class="container-fluid">
-         <div class="row">
-             <div class="col-xs-12 col-md-12 col-lg-4">
-                <h4>Please search by city and state</h4>
-                <form id="search">
-                   <label for="city" class="city">City</label>
-                   <input type="text" name="city" placeholder="Denver" class="city" id="city" required>
-                   <label for="state" class="state">State</label>
-                   <select class="form-control" id="state" required data-width="auto">
+         <div class="navbar-header">
+            <img src="images/icon.png">
+         </div>
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+               <li><a href="about.html" class="link">About Me</a></li>
+               <li><a href="contact.html" class="link">Contact Me</a></li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+   <h3 class="quote">Beer is living proof that God loves use and wants us to be happy</h3>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-md-12 col-lg-4">
+            <h4>Please search by city and state</h4>
+            <form id="search">
+               <label for="city" class="city">City</label>
+               <input type="text" name="city" placeholder="Denver" class="city" id="city" required>
+               <label for="state" class="state">State</label>
+               <select class="form-control" id="state" required data-width="auto">
                         <option value="" disabled selected>Choose State</option>
                     	<option value="Alabama">Alabama</option>
                     	<option value="Alaska">Alaska</option>
@@ -95,39 +97,40 @@
                     	<option value="Wisconsin">Wisconsin</option>
                     	<option value="Wyoming">Wyoming</option>
                     </select>
-                   <input id="submit" name="submit" type="submit" value="Submit">
-                </form>
-                <div class="text-center">
-                <a href="#map"><button>Jump to Map</button></a>
+               <input id="submit" name="submit" type="submit" value="Submit">
+            </form>
+            <div class="text-center">
+               <a href="#map"><button>Jump to Map</button></a>
             </div>
-             </div>
-             <div class="col-xs-11 col-md-12 col-lg-6 col-lg-offset-1" style="height:400px;overflow:auto;margin-bottom:50px">
-                    <table class="table table-striped table-fixed">
-                        <thead>
-                            <tr>
-                                <th id="brewery">Brewery</th>
-                                <th id="desc">Description</th>
-                                <th id="website">Website </th>
-                            </tr>
-                        </thead>
-                        <tbody class="output">
-                        </tbody>
-                    </table>
-            </div>
+         </div>
+         <div class="col-xs-11 col-md-12 col-lg-6 col-lg-offset-1" style="height:400px;overflow:auto;margin-bottom:50px">
+            <table class="table table-striped table-fixed">
+               <thead>
+                  <tr>
+                     <th id="brewery">Brewery</th>
+                     <th id="desc">Description</th>
+                     <th id="website">Website </th>
+                  </tr>
+               </thead>
+               <tbody class="output">
+               </tbody>
+            </table>
          </div>
       </div>
+   </div>
 
-      <!-- Map -->
-         <div class="col-xs-12 col-md-12 col-lg-12">
-           <div class = "map" id="map"></div>
-           <a name="map">
-         </div>
+   <!-- Map -->
+   <div class="col-xs-12 col-md-12 col-lg-12">
+      <div class="map" id="map"></div>
+      <a name="map">
+   </div>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA71CTObqTgTCh4Nt_uSbPf2yrGXCpD_Ug" async defer></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <script src="style/main.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA71CTObqTgTCh4Nt_uSbPf2yrGXCpD_Ug" async defer></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   <script src="style/main.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    </script>
-   </body>
+   </script>
+</body>
+
 </html>
