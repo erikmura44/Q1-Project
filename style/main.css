@@ -34,7 +34,7 @@ a.selected {
 */
 
 form {
-	width:470px;
+	width:auto;
 	margin:0 auto;
     margin-bottom: 40px;
     border: 1px solid grey;
@@ -47,7 +47,7 @@ label {
 	letter-spacing:2px;
 }
 input, textarea {
-	width:439px;
+	width:auto;
 	height:27px;
 	background:#efefef;
 	border-radius:5px;
