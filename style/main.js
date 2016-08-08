@@ -13,18 +13,18 @@ var lat = [];
 var long = [];
 var links = [];
 var marker;
-var markers = [];
 var infowindow;
+var namesArr;
 
 //----- Functions for Map -----//
 
 function loop(data) {
-   for (var i in data.data) {
+   for (var i in namesArr) {
       // Create arrays to hold names and addresses
-      names.push(data.data[i].brewery.name);
-      lat.push(data.data[i].latitude);
-      long.push(data.data[i].longitude);
-      links.push(data.data[i].brewery.website);
+      names.push(namesArr[i].brewery.name);
+      lat.push(namesArr[i].latitude);
+      long.push(namesArr[i].longitude);
+      links.push(namesArr[i].brewery.website);
    }
 }
 
@@ -77,20 +77,23 @@ $('form').on('submit', function(event) {
    var breweries = []
    myUrl = 'https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/locations?locality=' + city + '&region=' + state +
       '&key=ee92426cf2e9727bd6730249465b5c54',
-      console.log(myUrl)
+      console.log(myUrl);
    $.get(myUrl)
       .then(function(data) {
-         var namesArr = data.data; ///assigning variable to the data
+         namesArr = data.data; ///assigning variable to the data
+         if (data.data === undefined){ ///producing error message if no breweries found
+            $(".output").append("<tr><td></td><td>No Breweries in this area, please search again!</td><td></td></tr>");
+            $("td").css("color", "red");
+         };
          if (data.numberOfPages > 1) { ///checking if the API is more than 1 page
             numPages = data.numberOfPages;
             for (i = 2; i <= numPages; i++) {
-               $.get('https://galvanize-cors-proxy.herokuapp.com/http://api.brewerydb.com/v2/locations?locality=' + city + '&region=' + state + '&p=' +
-                     i + '&key=ee92426cf2e9727bd6730249465b5c54')
-                  .then(function(dataTwo) {
+               $.get('https://galvanize-cors-proxy.herokuapp.com///api.brewerydb.com/v2/locations?locality=' + city + '&region=' + state + '&p=' + i + '&key=ee92426cf2e9727bd6730249465b5c54')
+                  .then(function(dataTwo) { ///if API has more than one page,
+                     namesArr = namesArr.concat(dataTwo.data); ///add the data from the second page to the first
                      loop(data);
                      initMap(lat, long);
                      createMarkers(lat, long);
-                     namesArr = namesArr.concat(dataTwo.data); ///add the data from the second page to the first
                      for (i in namesArr) {
                         $(".output").append("<tr><td>" + namesArr[i].brewery.name + "</td><td>" + namesArr[i].brewery.description +
                            "</td><td> <a href=" + namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>")
@@ -103,8 +106,7 @@ $('form').on('submit', function(event) {
                loop(data);
                initMap(lat, long);
                createMarkers(lat, long);
-               $(".output").append("<tr><td>" + namesArr[i].brewery.name + "</td><td>" + namesArr[i].brewery.description + "</td><hr><td> <a href=" +
-                  namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>")
+               $(".output").append("<tr><td>" + namesArr[i].brewery.name + "</td><td>" + namesArr[i].brewery.description + "</td><td> <a href=" + namesArr[i].brewery.website + " target=" + "_blank" + ">Website</a> </td></tr>")
                allBreweries.push(namesArr[i])
             }
          }
