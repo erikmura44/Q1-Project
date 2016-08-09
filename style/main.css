@@ -2,7 +2,11 @@
     font-family: 'Bernier';
     src: url('bernier/Bernier.otf');
 }
-
+/*
+  ========================================
+  Nav Bar
+  ========================================
+*/
 .navbar-brand {
     padding-left: 100px;
 }
@@ -88,7 +92,7 @@ textarea::-webkit-input-placeholder {
 }
 /*
 ========================================
-    Output
+    Output Box
 ========================================
 */
 #brewery {

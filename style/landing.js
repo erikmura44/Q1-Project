@@ -1,15 +1,15 @@
 $(document).ready(function() {
    $('.pour').delay(1000).animate({
       height: '380px'
-   }, 1500).delay(1600).slideUp(500); //Pour Me Another Drink, Bartender!
+   }, 1500).delay(1600).slideUp(500); 
 
    $('#liquid').delay(2400).animate({
       height: '170px'
-   }, 2500); // I Said Fill 'Er Up!
+   }, 2500);
 
    $('.beer-foam').delay(2400).animate({
       bottom: '200px'
-   }, 2500); // Keep that Foam Rollin' Toward the Top! Yahooo!
+   }, 2500);
 
    $('.hidden').fadeOut(1);
    $('.hidden').removeClass('hidden');
