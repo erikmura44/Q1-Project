@@ -13,11 +13,9 @@ var breweries;
 
 $('.city').change(function() {
    city = $(this).val()
-   console.log(city)
 })
 $('#state').change(function() {
    state = $(this).val()
-   console.log(state)
 })
 
 //----- Error Message for No Results -----//
@@ -103,7 +101,7 @@ function createMarkers(lat, long) {
             infowindow.open(map, marker);
             setTimeout(function() {
                infowindow.close();
-            }, 3000);
+            }, 1500);
          };
       })(marker, content, infowindow));
    }
