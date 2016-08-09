@@ -74,7 +74,6 @@ function loop(data) {
 //----- Creating the Map, adding markers from data arrays-----//
 
 function initMap(lat, long) {
-   // Create a map object and specify the DOM element for display.
    map = new google.maps.Map(document.getElementById('map'), {
       center: {
          lat: lat[0],
@@ -137,7 +136,6 @@ $('form').on('submit', function(event) {
 $('.city').focus(function() {
    $('td').remove();
    $("input[type=text], textarea").val("");
-   marker = {};
 })
 $('#state').focus(function() {
    $('td').remove();
