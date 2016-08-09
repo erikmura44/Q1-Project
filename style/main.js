@@ -22,7 +22,7 @@ $('#state').change(function() {
 
 function noResults(data){
    if (data.data === undefined){
-      $(".output").append("<tr><td></td><td>No Breweries in this area, please search again!</td><td></td></tr>");
+      $(".output").append("<tr><td></td><td>No Breweries in the " + city + ", " + state + " area, please search again!</td><td></td></tr>");
       $("td").css("color", "red");
    };
 }
